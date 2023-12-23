@@ -1,0 +1,19 @@
+5 HOME
+10 FOR I = 0 TO 63
+20 FOR J = 0 TO 47
+30 X = (I/63)*2 - 1.5
+40 Y = (J/47)*2 - 1
+50 K = 0
+60 S = X
+70 T = Y
+80 W = (S*S) - (T*T)
+90 T = 2*S*T + Y
+100 S = W + X
+110 K = K + 1
+120 W = (S*S) + (T*T)
+130 IF W > 4 GOTO 160
+140 IF K < 20 GOTO 80
+150 GOTO 200
+160 DOT I, J
+200 NEXT J
+210 NEXT I
